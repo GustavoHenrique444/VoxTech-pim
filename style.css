@@ -1588,3 +1588,80 @@ body {
     .footer-links a:hover { padding-left: 0; }
 }
 
+/* ================= 14. CORREÇÕES DE RESPONSIVIDADE (MOBILE) ================= */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste do Cabeçalho (Header) */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .search-bar {
+        width: 100%;
+        order: 3; /* Joga a barra de pesquisa para debaixo da logo e ícones */
+    }
+    .header-icons {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    /* 2. Ajuste do Banner (Carrossel) para não distorcer */
+    .carousel-container {
+        height: 180px; 
+    }
+
+    /* 3. Ajuste da Tela de Produto (Para a imagem ficar em cima do preço) */
+    .product-details {
+        flex-direction: column;
+        padding: 20px 5%;
+        gap: 20px;
+    }
+    .main-image-container {
+        height: 280px;
+        padding: 20px;
+    }
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 4. Ajuste da Grade de Produtos na Home (2 produtos por linha) */
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    .produto-card {
+        height: auto;
+        padding-bottom: 15px;
+    }
+    .img-produto {
+        height: 120px;
+        padding: 10px;
+    }
+    .info-produto {
+        height: auto;
+        padding: 0 10px;
+    }
+    .info-produto h3 {
+        font-size: 0.85rem; /* Diminui a fonte do título para caber na tela pequena */
+    }
+    .preco {
+        font-size: 1.1rem;
+    }
+    .btn-comprar {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    /* 5. Ajuste das Categorias Redondas */
+    .categorias {
+        gap: 20px;
+    }
+    .cat-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+}
